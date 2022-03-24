@@ -7,7 +7,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  database: dairy
+  database: sdairy
   username: postgres
   password: postgres
   host: localhost
@@ -17,7 +17,7 @@ default: &default
 development:
   <<: *default
   adapter: postgresql
-  database: dairy
+  database: sdairy
   username: postgres
   password: postgres
   host: localhost
@@ -38,7 +38,7 @@ development:
 production:
   <<: *default
   adapter: postgresql
-  database: dairy
+  database: sdairy
   username: postgres
   password: postgres
   host: localhost
