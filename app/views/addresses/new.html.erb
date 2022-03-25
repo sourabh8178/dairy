@@ -1,0 +1,22 @@
+<%= form_for @address, :url => "/filter_address", method: "POST" do |form| %>
+    <div class="col-md-3">
+      <label>Address</label>
+      <select class="selectpicker form-control" name="address">
+        <option>Select Address</option>
+        <% @addresses.each do |address| %>
+          <option value="<%= address.id%>"><%= address.name %></option>
+        <% end %>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <label>sub_addresses</label>
+      <select class="selectpicker form-control" name="sub_addresse">
+        <option>Select Address</option>
+        <% @sub_addresses.each do |subaddress| %>
+          <option value="<%= subaddress.id%>"><%= subaddress.name %></option>
+        <% end %>
+      </select>
+    </div>
+  <button type="submit" class="btn btn-primary">Submit</button><br/>
+<% end %>
+

@@ -1,0 +1,7 @@
+<% if @address.present?%>
+
+<% else %>
+<h1>Plese select correct address<h1>
+	
+<% end %>
+<%= render partial: 'products/index', locals: {products: @products} %> 

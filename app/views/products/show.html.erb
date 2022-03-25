@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style1.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="card mb-3">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="" class="card-img" alt="...">
+                <%#=  image_tag @product.image_url class:"card-img""%>
+                <%= image_tag @product.image_url class: "card-img"%>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title"><%= @product.discription%></h5>
+                    <p class="card-text"><%= @product.name%></p>
+                    <p class="card-text"><small class="text-muted"><%= @product.quantity%></small></p>
+                    <h3>Rs. <%= @product.discount%></h3><small class="text-muted"><strike>MRP:Rs. <%= @product.price%></strike></small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        Truly Refreshing!
+    </div>
+    <label for="" class="label">Order by: <strong>07:55 PM Today</strong> & get the delivery by <strong>24 Mar, 2022, Tomorrow</strong></label>
+    <h3 class="freq">Frequency</h3>
+    <div class="check_box">
+        <input type="checkbox" id="everyday" name="Everyday" value="Everyday">
+        <label for="everyday"> Everyday</label><br>
+        <input type="checkbox" id="one_time_order" name="one_time_order" value="one_time_order">
+        <label for="one_time_order"> One Time Order</label><br>
+        <input type="checkbox" id="on_interval" name="on_interval" value="on_interval">
+        <label for="on_interval"> On Interval</label><br>
+        <input type="checkbox" id="Cutomize" name="Cutomize" value="Customize">
+        <label for="customize"> Customize</label><br>
+    </div>
+    <label for="" class="starting">Starting on:24 Mar, 2022 Ends on: <h6>(Optional)</h6></label>
+    <div class="buttons">
+        <button class="btn btn-outline-primary minus">-</button>
+        <p>0</p><button class="btn btn-primary plus">+</button>
+    </div>
+
+
+
+</body>
+
+</html>
+<style type="text/css">
+.card {
+    border: none;
+}
+
+.box {
+    border: 2px solid green;
+    border-style: dashed;
+    width: 80%;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.card-img{
+	height: 20px;
+	width: 30px;
+}
+@media screen and (max-width: 580px) {
+    .box {
+        width: 100%;
+        padding: 15px 20px 15px 20px;
+        word-spacing: 2px;
+    }
+    .card-body {
+        word-spacing: normal;
+    }
+    .label {
+        margin-left: 10px;
+        margin-top: 8px;
+    }
+    strong {
+        color: rgb(3, 126, 156);
+    }
+    .freq {
+        font-size: 25px;
+        opacity: 0.7;
+        margin-left: 9px;
+    }
+    .check_box {
+        display: flex;
+    }
+    .starting {
+        margin: 5px;
+    }
+    .buttons {
+        display: flex;
+        margin-top: 10px;
+        text-align: center;
+        justify-content: center;
+        padding: 4px;
+    }
+    .minus {
+        border: 2px solid black;
+        border-radius: 50%;
+    }
+}
+</style>
